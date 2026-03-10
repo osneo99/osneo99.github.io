@@ -1,4 +1,10 @@
 @import "tailwindcss";
+@import "@apron-design/react/styles";
+
+/*
+ * Tailwind CSS v4 Breakpoints (Mobile-first)
+ * sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px
+ */
 
 :root {
   --background: #ffffff;
@@ -10,6 +16,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Container max-widths for responsive design */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,4 +48,33 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+/* Container utility class for centering content with padding */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+  
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+  
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+  
+  @media (min-width: 1536px) {
+    max-width: 1536px;
+  }
 }
